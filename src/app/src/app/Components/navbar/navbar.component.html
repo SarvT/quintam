@@ -1,1 +1,25 @@
-<p>navbar works!</p>
+<nav class="flex justify-between">
+  <div class="img">
+    <img src="" alt="Quintam" />
+  </div>
+  <div class="nav-lists">
+    <ul class="flex justify-evenly">
+      <!-- <li class="opacity-80 hover:opacity-100"><a routerLink="/home"> Home </a></li>
+      <li class="opacity-80 hover:opacity-100"><a routerLink="/about"> About </a></li>
+      <li class="opacity-80 hover:opacity-100"><a routerLink="/folio"> Work </a></li> -->
+      <li
+        *ngFor="let item of navItems"
+        class="opacity-80 hover:opacity-100 hover:-translate-y-1/4 duration-500"
+      >
+        <a [routerLink]="item.path">{{ item.label }}</a>
+      </li>
+    </ul>
+  </div>
+  <div class="ctn">
+    <button
+      class="w-24 bg-green-700 text-white p-2 rounded-3xl border-b-4 border-black shadow-lg hover:drop-shadow-2xl hover:border-none duration-500"
+    >
+      Contact
+    </button>
+  </div>
+</nav>

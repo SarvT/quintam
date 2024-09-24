@@ -1,0 +1,8 @@
+nav{
+    position: sticky;
+    margin: 2rem;
+}
+
+.nav-lists ul li{
+    margin: 0 3rem;
+}
